@@ -1,0 +1,26 @@
+<.form :let={f} for={@form} as={:user} id="login_form_magic" action={~p"/users/log-in"}>
+  <.input
+    readonly={!!@current_scope}
+    field={f[:email]}
+    type="email"
+    label="Email"
+    autocomplete="username"
+    required
+  />
+  <button>
+    Log in with email <span aria-hidden="true">→</span>
+  </button>
+</.form>
+
+<.form :let={f} for={@form} as={:user} id="login_form_password" action={~p"/users/log-in"}>
+  <.input
+    readonly={!!@current_scope}
+    field={f[:email]}
+    type="email"
+    label="Email"
+    autocomplete="username"
+    required
+  />
+  <.input field={f[:password]} type="password" label="Password" autocomplete="current-password" />
+  {@form[:remember_me].name}
+</.form>

@@ -1,0 +1,5 @@
+defmodule DwcInPhxWeb.UserRegistrationHTML do
+  use DwcInPhxWeb, :html
+
+  embed_templates "user_registration_html/*"
+end

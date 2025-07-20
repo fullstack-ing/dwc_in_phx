@@ -1,0 +1,14 @@
+<.form :let={f} for={@changeset} action={~p"/users/register"}>
+  <.input
+    field={f[:email]}
+    type="email"
+    label="Email"
+    autocomplete="username"
+    required
+    phx-mounted={JS.focus()}
+  />
+
+  <.button>
+    Create an account
+  </.button>
+</.form>

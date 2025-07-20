@@ -1,0 +1,26 @@
+<.form :let={f} for={@email_changeset} action={~p"/users/settings"} id="update_email">
+  <input type="hidden" name="action" value="update_email" />
+  <.input field={f[:email]} type="email" label="Email" autocomplete="username" required />
+  <button>Change Email</button>
+</.form>
+
+<.form :let={f} for={@password_changeset} action={~p"/users/settings"} id="update_password">
+  <input type="hidden" name="action" value="update_password" />
+  <.input
+    field={f[:password]}
+    type="password"
+    label="New password"
+    autocomplete="new-password"
+    required
+  />
+  <.input
+    field={f[:password_confirmation]}
+    type="password"
+    label="Confirm new password"
+    autocomplete="new-password"
+    required
+  />
+  <button>
+    Save Password
+  </button>
+</.form>
