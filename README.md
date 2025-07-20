@@ -1,18 +1,21 @@
 # DwcInPhx
+I wanted to learn how to best use web components in place of doing LiveView with phoenix.
 
-To start your Phoenix server:
+This project is a todo app as a learning exercise.
 
-* Run `mix setup` to install and setup dependencies
-* Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+## What I did to get this project started.
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+First I wanted to remove all frontend deps from phoenix.
+* No assets
+* No LiveView
+* No dashboard
 
-Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+```bash
+mix phx.new dwc_in_phx --database sqlite3 --binary-id --no-assets --no-live --no-dashboard
+```
 
-## Learn more
+I will likely install EsBuild but run it outside of the mix package.
 
-* Official website: https://www.phoenixframework.org/
-* Guides: https://hexdocs.pm/phoenix/overview.html
-* Docs: https://hexdocs.pm/phoenix
-* Forum: https://elixirforum.com/c/phoenix-forum
-* Source: https://github.com/phoenixframework/phoenix
+I want to create a clear line of sepration from phoenix and elixir.
+
+My hope is that most of what I make can be easly moved outside of this application and ported to any backend lang with little effort.
