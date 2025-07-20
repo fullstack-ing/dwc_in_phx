@@ -85,7 +85,7 @@ defmodule DwcInPhxWeb do
       # HTML escaping functionality
       import Phoenix.HTML
       # Core UI components
-      import DwcInPhxWeb.CoreComponents
+      # import DwcInPhxWeb.CoreComponents
 
       # Common modules used in templates
       alias Phoenix.LiveView.JS
